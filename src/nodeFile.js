@@ -51,4 +51,4 @@ let alice = new Visitor(
 alice.save();
 load(`Alice Cooper`);
 
-module.exports = { Visitor };
+module.exports = { Visitor, load };

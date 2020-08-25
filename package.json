@@ -1,19 +1,19 @@
 {
-    "name": "siyabulela-khumalo-280-node-file-io-",
-    "version": "1.0.0",
-    "description": "Node & File IO (280)\r For raw project instructions see: https://raw.githubusercontent.com/Umuzi-org/tech-department/master/content/projects/nodejs/file-io/_index.md",
-    "main": "index.js",
-    "scripts": {
-        "test": "jasmine"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/Umuzi-org/Siyabulela-Khumalo-280-node-file-io-.git"
-    },
-    "author": "",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/Umuzi-org/Siyabulela-Khumalo-280-node-file-io-/issues"
-    },
-    "homepage": "https://github.com/Umuzi-org/Siyabulela-Khumalo-280-node-file-io-#readme"
+  "name": "my_jasmine_goodies",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "jasmine"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jasmine": "^3.5.0",
+    "jsdom": "^16.2.2"
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "devDependencies": {},
+  "description": ""
 }

@@ -1,4 +1,4 @@
-const { Visitor } = require("../src/nodeFile");
+const { Visitor, load } = require("../src/nodeFile");
 
 describe("function save()", () => {
     let alice = new Visitor(
