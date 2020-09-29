@@ -1,37 +1,32 @@
 const { Visitor, load } = require("../src/nodeFile");
+let alice = new Visitor(
+    "Alice Cooper",
+    72,
+    "04/02/2020",
+    "10:45",
+    `An American singer, songwriter, and actor whose career spans over 50 years`,
+    `Wikipedia`
+  );
 
-describe("function save()", () => {
-    let alice = new Visitor(
-        "Alice Cooper",
-        72,
-        "04/02/2020",
-        "10:45",
-        `An American singer, songwriter, and actor whose career spans over 50 years`,
-        `Wikipedia`
-    );
+describe("save function", () => {
+  it("should exist", () => {
+    expect(alice.save).toBeDefined();
+  });
+});
 
-    it("should exist", () => {
-        expect(alice.save).toBeDefined();
+describe("load function", () => {
+    it("should read data", () => {
+      expect(alice.fullName).toBe(`Alice Cooper`);
+      expect(alice.age).toBe(72);
+      expect(alice.dateVisited).toBe(`04/02/2020`);
+      expect(alice.timeVisited).toBe(`10:45`);
+      expect(alice.comments).toBe(`An American singer, songwriter, and actor whose career spans over 50 years`);
+      expect(alice.assistant).toBe(`Wikipedia`);
     });
-
-    it("should read a visitor's information in a file", () => {
-        fs = require("fs");
-
-        alice.save();
-
-        fs.readFile("../visitor_alice_cooper.json", "UTF8", (err, data) => {
-            if (err) throw err;
-            else {
-                let readData = JSON.parse(data);
-                expect(readData.fullName).toEqual("alice_cooper");
-                expect(readData.age).toEqual(72);
-                expect(readData.date).toEqual("04/02/2020");
-                expect(readData.time).toEqual("10:45");
-                expect(readData.comments).toEqual(
-                    "An American singer, songwriter, and actor whose career spans over 50 years"
-                );
-                expect(readData.person).toEqual("Wikipedia");
-            }
-        });
-    });
+  });
+  
+describe(`load function`, () => {
+  it(`should read results from load function`, () => {
+    expect(load(`Alice Cooper`)).not.toBe(null)
+  });
 });

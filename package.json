@@ -15,5 +15,13 @@
     "lib": "lib"
   },
   "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Umuzi-org/Siyabulela-Khumalo-280-node-file-io-.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Umuzi-org/Siyabulela-Khumalo-280-node-file-io-/issues"
+  },
+  "homepage": "https://github.com/Umuzi-org/Siyabulela-Khumalo-280-node-file-io-#readme",
   "description": ""
 }
