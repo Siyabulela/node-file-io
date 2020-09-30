@@ -1,27 +1,19 @@
 var fs = require("fs");
 
 class Visitor {
-    constructor(fullName, age, dateVisited, timeVisited, comments, assistant) {
-        this.fullName = fullName;
-        this.age = age;
-        this.dateVisited = dateVisited;
-        this.timeVisited = timeVisited;
-        this.comments = comments;
-        this.assistant = assistant;
-    }
+  constructor(fullName, age, dateVisited, timeVisited, comments, assistant) {
+    this.fullName = fullName;
+    this.age = age;
+    this.dateVisited = dateVisited;
+    this.timeVisited = timeVisited;
+    this.comments = comments;
+    this.assistant = assistant;
+  }
 
-    save() {
-            fs.appendFile(
-                    `visitor_${this.fullName.replace(` `, `_`).toLowerCase()}.json`,
-      `{
-        "name":"${this.fullName}", 
-        "age":${this.age}, 
-        "date of visit":"${this.dateVisited}", 
-        "time of visit":"${this.timeVisited}", 
-        "comments":"${this.comments}", 
-        "person assisted":"${this.assistant}"
-      }`,
-
+  save() {
+    fs.appendFile(
+      `visitor_${this.fullName.replace(` `, `_`).toLowerCase()}.json`,
+      JSON.stringify(this, null, 4),
       function (err) {
         if (err) throw err;
       }
@@ -35,7 +27,7 @@ function load(name) {
     `utf8`,
     (err, res) => {
       if (err) throw err;
-      return console.log(res);
+     console.log(res);
     }
   );
 }
