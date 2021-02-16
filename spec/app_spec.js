@@ -17,7 +17,7 @@ describe("Testing app.js", () => {
 
   it("should check status code is 200", async (done) => {
     try {
-      const route = await axios.delete("http://127.0.0.1:3000/deleteAVisitor");
+      const route = await axios.delete("localhost:3000/deleteAVisitor");
       expect(route.status).toEqual(200);
     } catch (err) {
       console.log(err);
@@ -27,7 +27,7 @@ describe("Testing app.js", () => {
 
   it("should return empty object after deleting A visitors", async (done) => {
     try {
-      const route = await axios.delete("http://127.0.0.1:3000/deleteAVisitor");
+      const route = await axios.delete("localhost:3000/deleteAVisitor");
       expect(route.outputData).toEqual({});
     } catch (err) {
       console.log(err);
@@ -36,7 +36,7 @@ describe("Testing app.js", () => {
   });
   it("should check status code is 200", async (done) => {
     try {
-      const route = await axios.put("http://127.0.0.1:3000/updateVisitor");
+      const route = await axios.put("localhost:3000/updateVisitor");
       expect(route.status).toEqual(200);
     } catch (err) {
       console.log(err);
