@@ -29,12 +29,12 @@ const createTable = (request, response) => {
 
 const addVisitor = (request, response) => {
   let {
-    fullName = `Siyabulela Khumalo`,
+    fullName = `Mark Henry`,
     age = 23,
-    dateVisited = `06/04/2012`,
-    timeVisited = `13:55`,
-    personassisted = `Advocate`,
-    comments = `You're doing great!`,
+    dateVisited = `09/01/2021`,
+    timeVisited = `12:15`,
+    personassisted = `Wrestler`,
+    comments = `Hell world!`,
   } = request.body;
 
   pool.query(
@@ -99,12 +99,12 @@ const getVisitorById = (request, response) => {
 const updateVisitor = (request, response) => {
   const id = parseInt(request.params.id[1]);
   let {
-    fullName,
-    age,
-    dateVisited,
-    timeVisited,
-    personassisted,
-    comments,
+    fullName = `Ray`,
+    age = 23,
+    dateVisited = `09/01/2001`,
+    timeVisited = `21:15`,
+    personassisted = `Wrestler`,
+    comments = `Hello world!`,
   } = request.body;
 
   pool.query(
